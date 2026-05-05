@@ -1,0 +1,1408 @@
+
+Warning: This is a simple server for use in testing or debugging Angular applications
+locally. It hasn't been reviewed for security issues.
+
+Binding this server to an open connection can result in compromising your application or
+computer. Using a different host than the one passed to the "--host" flag might result in
+websocket connection issues. You might need to use "--disable-host-check" if that's the
+case.
+    
+- Generating browser application bundles (phase: setup)...
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                                    |  Raw Size
+vendor.js                                                                                               | vendor                                                   |   2.28 MB |
+polyfills.js                                                                                            | polyfills                                                | 252.58 kB |
+styles.css, styles.js                                                                                   | styles                                                   | 150.97 kB |
+main.js                                                                                                 | main                                                     |  26.80 kB |
+runtime.js                                                                                              | runtime                                                  |  12.68 kB |
+
+| Initial Total                                            |   2.71 MB
+
+Lazy Chunk Files                                                                                        | Names                                                    |  Raw Size
+default-node_modules_angular_forms_fesm2022_forms_mjs.js                                                | auth-login-login-component                               | 295.72 kB |
+default-src_app_core_services_chat_service_ts.js                                                        | admin-chats-chats-component                              | 105.70 kB |
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component       |  51.46 kB |
+src_app_landing_home_home_component_ts.js                                                               | landing-home-home-component                              |  41.61 kB |
+src_app_employee_dashboard_dashboard_component_ts.js                                                    | employee-dashboard-dashboard-component                   |  31.99 kB |
+src_app_admin_statistics_statistics_component_ts.js                                                     | admin-statistics-statistics-component                    |  29.60 kB |
+src_app_employee_profile_profile_component_ts.js                                                        | employee-profile-profile-component                       |  29.16 kB |
+src_app_auth_register_register_component_ts.js                                                          | auth-register-register-component                         |  29.01 kB |
+src_app_admin_chats_chats_component_ts.js                                                               | admin-chats-chats-component                              |  27.65 kB |
+src_app_admin_projects_projects_component_ts.js                                                         | admin-projects-projects-component                        |  27.59 kB |
+src_app_admin_users_users_component_ts.js                                                               | admin-users-users-component                              |  27.52 kB |
+src_app_employee_chat_chat_component_ts.js                                                              | employee-chat-chat-component                             |  27.36 kB |
+src_app_admin_tasks_tasks_component_ts.js                                                               | admin-tasks-tasks-component                              |  26.61 kB |
+src_app_admin_teams_teams_component_ts.js                                                               | admin-teams-teams-component                              |  25.55 kB |
+src_app_admin_dashboard_dashboard_component_ts.js                                                       | admin-dashboard-dashboard-component                      |  25.32 kB |
+src_app_auth_login_login_component_ts.js                                                                | auth-login-login-component                               |  25.06 kB |
+src_app_admin_calendar_calendar_component_ts.js                                                         | admin-calendar-calendar-component                        |  24.72 kB |
+src_app_admin_employees_employees_component_ts.js                                                       | admin-employees-employees-component                      |  24.66 kB |
+src_app_employee_my-projects_my-projects_component_ts.js                                                | employee-my-projects-my-projects-component               |  24.62 kB |
+src_app_employee_my-tasks_my-tasks_component_ts.js                                                      | employee-my-tasks-my-tasks-component                     |  23.51 kB |
+src_app_auth_forgot-password_forgot-password_component_ts.js                                            | auth-forgot-password-forgot-password-component           |  23.32 kB |
+src_app_admin_notifications_notifications_component_ts.js                                               | admin-notifications-notifications-component              |  22.63 kB |
+src_app_employee_my-calendar_my-calendar_component_ts.js                                                | employee-my-calendar-my-calendar-component               |  22.05 kB |
+src_app_auth_waiting-approval_waiting-approval_component_ts.js                                          | auth-waiting-approval-waiting-approval-component         |  21.54 kB |
+src_app_employee_notifications_notifications_component_ts.js                                            | employee-notifications-notifications-component           |  21.36 kB |
+src_app_employee_my-team_my-team_component_ts.js                                                        | employee-my-team-my-team-component                       |  20.59 kB |
+common.js                                                                                               | common                                                   |   9.21 kB |
+src_app_shared_layouts_employee-layout_employee-layout_component_ts.js                                  | shared-layouts-employee-layout-employee-layout-component |   6.53 kB |
+src_app_shared_layouts_admin-layout_admin-layout_component_ts.js                                        | shared-layouts-admin-layout-admin-layout-component       |   6.46 kB |
+src_app_admin_settings_settings_component_ts.js                                                         | admin-settings-settings-component                        |   3.04 kB |
+
+Build at: 2026-05-01T15:53:23.874Z - Hash: 3c3a1b68d4a01abc - Time: 4771ms
+
+Warning: C:\Users\User\Desktop\2émé genie info\2eme semestre\jsp\project-management-app\frontend\node_modules\@stomp\rx-stomp\esm6\index.js depends on '@stomp/stompjs'. CommonJS or AMD dependencies can cause optimization bailouts.
+For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+
+
+
+** Angular Live Development Server is listening on 0.0.0.0:4200, open your browser on http://localhost:4200/ **
+
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.68 kB |
+
+34 unchanged chunks
+
+Build at: 2026-05-01T15:53:24.220Z - Hash: a29ecad99f69fe29 - Time: 194ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.68 kB |
+
+Lazy Chunk Files    | Names   | Raw Size
+common.js           | common  |  9.21 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T15:56:40.763Z - Hash: 74b44586753ef29e - Time: 1105ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.68 kB |
+
+Lazy Chunk Files    | Names   | Raw Size
+common.js           | common  |  9.21 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T15:56:50.921Z - Hash: 4e375d47f0214cd8 - Time: 188ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.68 kB |
+
+Lazy Chunk Files    | Names   | Raw Size
+common.js           | common  |  9.21 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T15:56:55.030Z - Hash: c168abc6d41e6c12 - Time: 198ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 27.53 kB |
+runtime.js          | runtime | 12.68 kB |
+
+Lazy Chunk Files    | Names   | Raw Size
+common.js           | common  |  8.58 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:00:20.497Z - Hash: c307abee8cb50e67 - Time: 699ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                              | Names                       |  Raw Size
+runtime.js                                       | runtime                     |  12.68 kB |
+
+Lazy Chunk Files                                 | Names                       |  Raw Size
+default-src_app_core_services_chat_service_ts.js | admin-chats-chats-component | 105.96 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:00:47.222Z - Hash: 465e54084a94e710 - Time: 330ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 51.68 kB |
+src_app_employee_dashboard_dashboard_component_ts.js                                                    | employee-dashboard-dashboard-component             | 32.21 kB |
+src_app_admin_notifications_notifications_component_ts.js                                               | admin-notifications-notifications-component        | 22.85 kB |
+src_app_employee_notifications_notifications_component_ts.js                                            | employee-notifications-notifications-component     | 21.58 kB |
+common.js                                                                                               | common                                             |  9.02 kB |
+
+29 unchanged chunks
+
+Build at: 2026-05-01T16:00:47.719Z - Hash: bb3da68f275b8e0c - Time: 420ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime | 12.68 kB |
+
+34 unchanged chunks
+
+Build at: 2026-05-01T16:10:31.561Z - Hash: b937117f65f084b6 - Time: 392ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                              | Names                                              | Raw Size
+runtime.js                                                       | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                 | Names                                              | Raw Size
+src_app_shared_layouts_admin-layout_admin-layout_component_ts.js | shared-layouts-admin-layout-admin-layout-component |  6.54 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:10:35.750Z - Hash: fa0fa2f244b44e7d - Time: 230ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 51.59 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:10:52.325Z - Hash: f75a06a33460c2a9 - Time: 553ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 51.93 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:11:01.458Z - Hash: a6c7211c169cbd1d - Time: 452ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 25.47 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:11:11.875Z - Hash: df7a5e64afb8a2dc - Time: 257ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 51.75 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:11:53.036Z - Hash: e549e8988fdf01c5 - Time: 287ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 51.71 kB |
+src_app_admin_dashboard_dashboard_component_ts.js                                                       | admin-dashboard-dashboard-component                | 25.43 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:11:53.488Z - Hash: 9f48347dd8f2d07c - Time: 385ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 57.60 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:20:40.756Z - Hash: ac05d92bb69dea81 - Time: 316ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 58.87 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:20:44.290Z - Hash: 64c232a6ba12f06a - Time: 264ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 25.43 kB |
+common.js                                         | common                              |  9.28 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:24:05.338Z - Hash: ca075cf1eeba196a - Time: 575ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_employees_employees_component_ts.js | admin-employees-employees-component | 27.57 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:24:44.953Z - Hash: 9b0df3d7f9318a4a - Time: 379ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_employees_employees_component_ts.js | admin-employees-employees-component | 29.54 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:24:53.146Z - Hash: 093d89eb96376aee - Time: 244ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+main.js                                           | main                                | 27.57 kB |
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_tasks_tasks_component_ts.js         | admin-tasks-tasks-component         | 28.79 kB |
+src_app_admin_employees_employees_component_ts.js | admin-employees-employees-component | 28.61 kB |
+common.js                                         | common                              | 10.20 kB |
+
+30 unchanged chunks
+
+Build at: 2026-05-01T16:25:07.064Z - Hash: 0e09984a5bb44a49 - Time: 405ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_tasks_tasks_component_ts.js | admin-tasks-tasks-component | 30.67 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:25:11.022Z - Hash: 072000457add1f6d - Time: 238ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_teams_teams_component_ts.js | admin-teams-teams-component | 27.00 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:25:20.784Z - Hash: 9d9a25a0e0d9f4dc - Time: 312ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_teams_teams_component_ts.js | admin-teams-teams-component | 29.31 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:25:24.160Z - Hash: c8b0229a74250278 - Time: 240ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                       | Names                                       | Raw Size
+main.js                                                   | main                                        | 27.62 kB |
+runtime.js                                                | runtime                                     | 12.68 kB |
+
+Lazy Chunk Files                                          | Names                                       | Raw Size
+src_app_admin_notifications_notifications_component_ts.js | admin-notifications-notifications-component | 22.94 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:25:37.779Z - Hash: 8acf5c38257adfd5 - Time: 315ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                       | Names                                       | Raw Size
+runtime.js                                                | runtime                                     | 12.68 kB |
+
+Lazy Chunk Files                                          | Names                                       | Raw Size
+src_app_admin_notifications_notifications_component_ts.js | admin-notifications-notifications-component | 22.94 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:25:38.107Z - Hash: 5751e441539e78cd - Time: 251ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                       | Names                                       | Raw Size
+runtime.js                                                | runtime                                     | 12.68 kB |
+
+Lazy Chunk Files                                          | Names                                       | Raw Size
+src_app_admin_notifications_notifications_component_ts.js | admin-notifications-notifications-component | 24.42 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:25:42.741Z - Hash: 5e325271e5705532 - Time: 250ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                             | Names                             | Raw Size
+runtime.js                                      | runtime                           | 12.68 kB |
+
+Lazy Chunk Files                                | Names                             | Raw Size
+src_app_admin_projects_projects_component_ts.js | admin-projects-projects-component | 29.15 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:25:54.629Z - Hash: 6e8299953597f58f - Time: 303ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                             | Names                             | Raw Size
+runtime.js                                      | runtime                           | 12.68 kB |
+
+Lazy Chunk Files                                | Names                             | Raw Size
+src_app_admin_projects_projects_component_ts.js | admin-projects-projects-component | 31.56 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:25:57.898Z - Hash: 7c8c782cac25a209 - Time: 232ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_users_users_component_ts.js | admin-users-users-component | 27.67 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:07.533Z - Hash: 99f32a7cd3fa60c4 - Time: 499ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+main.js                                   | main                        | 27.66 kB |
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_users_users_component_ts.js | admin-users-users-component | 28.75 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:26:15.674Z - Hash: f040e9871dfe7f1d - Time: 311ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_users_users_component_ts.js | admin-users-users-component | 30.67 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:19.627Z - Hash: 12f939a7d0f8c234 - Time: 284ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                | Names                                | Raw Size
+runtime.js                                         | runtime                              | 12.68 kB |
+
+Lazy Chunk Files                                   | Names                                | Raw Size
+src_app_employee_my-tasks_my-tasks_component_ts.js | employee-my-tasks-my-tasks-component | 23.74 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:29.402Z - Hash: 55cde15f1d4e774d - Time: 296ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                | Names                                | Raw Size
+runtime.js                                         | runtime                              | 12.68 kB |
+
+Lazy Chunk Files                                   | Names                                | Raw Size
+src_app_employee_my-tasks_my-tasks_component_ts.js | employee-my-tasks-my-tasks-component | 25.43 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:32.867Z - Hash: d2dc150f3c477dee - Time: 228ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                          | Names                                          | Raw Size
+main.js                                                      | main                                           | 27.71 kB |
+runtime.js                                                   | runtime                                        | 12.68 kB |
+
+Lazy Chunk Files                                             | Names                                          | Raw Size
+src_app_employee_notifications_notifications_component_ts.js | employee-notifications-notifications-component | 21.86 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:26:38.961Z - Hash: 3737e81414679f0d - Time: 250ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                          | Names                                          | Raw Size
+runtime.js                                                   | runtime                                        | 12.68 kB |
+
+Lazy Chunk Files                                             | Names                                          | Raw Size
+src_app_employee_notifications_notifications_component_ts.js | employee-notifications-notifications-component | 21.86 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:39.177Z - Hash: 710411c4fffaf5b9 - Time: 184ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                          | Names                                          | Raw Size
+runtime.js                                                   | runtime                                        | 12.68 kB |
+
+Lazy Chunk Files                                             | Names                                          | Raw Size
+src_app_employee_notifications_notifications_component_ts.js | employee-notifications-notifications-component | 23.32 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:41.517Z - Hash: eac5c307839cf2c7 - Time: 249ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                      | Names                                      | Raw Size
+runtime.js                                               | runtime                                    | 12.68 kB |
+
+Lazy Chunk Files                                         | Names                                      | Raw Size
+src_app_employee_my-projects_my-projects_component_ts.js | employee-my-projects-my-projects-component | 24.97 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:49.127Z - Hash: 01ebaad9ab8e264a - Time: 240ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                      | Names                                      | Raw Size
+runtime.js                                               | runtime                                    | 12.68 kB |
+
+Lazy Chunk Files                                         | Names                                      | Raw Size
+src_app_employee_my-projects_my-projects_component_ts.js | employee-my-projects-my-projects-component | 26.70 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:26:57.431Z - Hash: 4fa8c1f642b2c5a9 - Time: 181ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 29.53 kB |
+src_app_admin_users_users_component_ts.js         | admin-users-users-component         | 27.94 kB |
+src_app_admin_employees_employees_component_ts.js | admin-employees-employees-component | 25.80 kB |
+common.js                                         | common                              | 15.75 kB |
+
+30 unchanged chunks
+
+Build at: 2026-05-01T16:27:19.112Z - Hash: 8f5bbc362ef0d213 - Time: 352ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+35 unchanged chunks
+
+Build at: 2026-05-01T16:27:19.434Z - Hash: 8f5bbc362ef0d213 - Time: 247ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 30.21 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:27:22.276Z - Hash: d64ba7001f56008b - Time: 234ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                  | Names                                  | Raw Size
+runtime.js                                           | runtime                                | 12.68 kB |
+
+Lazy Chunk Files                                     | Names                                  | Raw Size
+src_app_employee_dashboard_dashboard_component_ts.js | employee-dashboard-dashboard-component | 35.65 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:27:29.254Z - Hash: b0dfcb11b3ef45b0 - Time: 332ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+35 unchanged chunks
+
+Build at: 2026-05-01T16:27:29.628Z - Hash: b0dfcb11b3ef45b0 - Time: 312ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                              | Names                              | Raw Size
+runtime.js                                       | runtime                            | 12.68 kB |
+
+Lazy Chunk Files                                 | Names                              | Raw Size
+src_app_employee_my-team_my-team_component_ts.js | employee-my-team-my-team-component | 20.91 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:27:47.765Z - Hash: 8d9ec61615347350 - Time: 355ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                              | Names                              | Raw Size
+runtime.js                                       | runtime                            | 12.68 kB |
+
+Lazy Chunk Files                                 | Names                              | Raw Size
+src_app_employee_my-team_my-team_component_ts.js | employee-my-team-my-team-component | 22.18 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:01.297Z - Hash: 81c9ec5962365d17 - Time: 279ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                             | Names                             | Raw Size
+main.js                                         | main                              | 27.76 kB |
+runtime.js                                      | runtime                           | 12.68 kB |
+
+Lazy Chunk Files                                | Names                             | Raw Size
+src_app_admin_calendar_calendar_component_ts.js | admin-calendar-calendar-component | 25.49 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:28:16.597Z - Hash: c8a5ae15c1e770c6 - Time: 519ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                             | Names                             | Raw Size
+runtime.js                                      | runtime                           | 12.68 kB |
+
+Lazy Chunk Files                                | Names                             | Raw Size
+src_app_admin_calendar_calendar_component_ts.js | admin-calendar-calendar-component | 25.49 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:16.842Z - Hash: 25f17947b19bc670 - Time: 219ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                             | Names                             | Raw Size
+runtime.js                                      | runtime                           | 12.68 kB |
+
+Lazy Chunk Files                                | Names                             | Raw Size
+src_app_admin_calendar_calendar_component_ts.js | admin-calendar-calendar-component |  3.07 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:20.219Z - Hash: 379a5d58c5eb7a98 - Time: 230ms
+
+Error: src/app/admin/calendar/calendar.component.html:31:34 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:31:34 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:40:31 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:40:31 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:41:47 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:41:47 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:43:15 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:43:15 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:44:14 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:44:14 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:46:67 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:46:67 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:48:10 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:48:10 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                             | Names                             | Raw Size
+runtime.js                                      | runtime                           | 12.68 kB |
+
+Lazy Chunk Files                                | Names                             | Raw Size
+src_app_admin_calendar_calendar_component_ts.js | admin-calendar-calendar-component |  3.21 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:23.478Z - Hash: 2450c787228882d9 - Time: 219ms
+
+Error: src/app/admin/calendar/calendar.component.html:31:34 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:31:34 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:40:31 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:40:31 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:41:47 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:41:47 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:43:15 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:43:15 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:44:14 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:44:14 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:46:67 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:46:67 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+Error: src/app/admin/calendar/calendar.component.html:48:10 - error NG5002: Parser Error: Bindings cannot contain assignments
+
+Error: src/app/admin/calendar/calendar.component.html:48:10 - error NG5002: Parser Error: Unexpected token ), expected identifier, keyword, or string
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                             | Names                             | Raw Size
+runtime.js                                      | runtime                           | 12.68 kB |
+
+Lazy Chunk Files                                | Names                             | Raw Size
+src_app_admin_calendar_calendar_component_ts.js | admin-calendar-calendar-component | 27.36 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:27.779Z - Hash: 7edce689dfa2ded3 - Time: 215ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                      | Names                                      | Raw Size
+main.js                                                  | main                                       | 27.80 kB |
+runtime.js                                               | runtime                                    | 12.68 kB |
+
+Lazy Chunk Files                                         | Names                                      | Raw Size
+src_app_employee_my-calendar_my-calendar_component_ts.js | employee-my-calendar-my-calendar-component | 22.79 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:28:33.200Z - Hash: 9c9e6294e65ed993 - Time: 422ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                      | Names                                      | Raw Size
+runtime.js                                               | runtime                                    | 12.68 kB |
+
+Lazy Chunk Files                                         | Names                                      | Raw Size
+src_app_employee_my-calendar_my-calendar_component_ts.js | employee-my-calendar-my-calendar-component | 22.79 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:33.452Z - Hash: 0c1ff92f41b55e66 - Time: 220ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                      | Names                                      | Raw Size
+runtime.js                                               | runtime                                    | 12.68 kB |
+
+Lazy Chunk Files                                         | Names                                      | Raw Size
+src_app_employee_my-calendar_my-calendar_component_ts.js | employee-my-calendar-my-calendar-component | 23.48 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:36.184Z - Hash: aec0cfa4426bb998 - Time: 210ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                              | Names                       |  Raw Size
+runtime.js                                       | runtime                     |  12.68 kB |
+
+Lazy Chunk Files                                 | Names                       |  Raw Size
+default-src_app_core_services_chat_service_ts.js | admin-chats-chats-component | 106.04 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:28:52.525Z - Hash: ef670f1a9c908e0c - Time: 492ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+main.js                                   | main                        | 27.83 kB |
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_chats_chats_component_ts.js | admin-chats-chats-component | 28.14 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:29:02.344Z - Hash: dc2b0d27ebee3a85 - Time: 346ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_chats_chats_component_ts.js | admin-chats-chats-component | 28.14 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:29:02.601Z - Hash: ced8fb190cc73fc3 - Time: 227ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_chats_chats_component_ts.js | admin-chats-chats-component | 30.19 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:29:07.510Z - Hash: a6bee1b1d15bcc10 - Time: 357ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                 | Names                                          |  Raw Size
+main.js                                                                             | main                                           |  27.81 kB |
+runtime.js                                                                          | runtime                                        |  12.68 kB |
+
+Lazy Chunk Files                                                                    | Names                                          |  Raw Size
+default-src_app_core_services_chat_service_ts-src_app_core_utils_api-response_ts.js | admin-chats-chats-component                    | 107.05 kB |
+src_app_employee_dashboard_dashboard_component_ts.js                                | employee-dashboard-dashboard-component         |  36.57 kB |
+src_app_admin_projects_projects_component_ts.js                                     | admin-projects-projects-component              |  32.48 kB |
+src_app_admin_tasks_tasks_component_ts.js                                           | admin-tasks-tasks-component                    |  31.59 kB |
+src_app_admin_dashboard_dashboard_component_ts.js                                   | admin-dashboard-dashboard-component            |  31.13 kB |
+src_app_admin_teams_teams_component_ts.js                                           | admin-teams-teams-component                    |  30.24 kB |
+src_app_admin_users_users_component_ts.js                                           | admin-users-users-component                    |  28.86 kB |
+src_app_employee_chat_chat_component_ts.js                                          | employee-chat-chat-component                   |  28.37 kB |
+src_app_admin_calendar_calendar_component_ts.js                                     | admin-calendar-calendar-component              |  28.28 kB |
+src_app_employee_my-projects_my-projects_component_ts.js                            | employee-my-projects-my-projects-component     |  27.62 kB |
+src_app_admin_employees_employees_component_ts.js                                   | admin-employees-employees-component            |  26.72 kB |
+src_app_employee_my-tasks_my-tasks_component_ts.js                                  | employee-my-tasks-my-tasks-component           |  26.35 kB |
+src_app_admin_notifications_notifications_component_ts.js                           | admin-notifications-notifications-component    |  25.34 kB |
+src_app_employee_my-calendar_my-calendar_component_ts.js                            | employee-my-calendar-my-calendar-component     |  24.41 kB |
+src_app_employee_notifications_notifications_component_ts.js                        | employee-notifications-notifications-component |  24.24 kB |
+src_app_employee_my-team_my-team_component_ts.js                                    | employee-my-team-my-team-component             |  23.10 kB |
+common.js                                                                           | common                                         |  14.82 kB |
+
+16 unchanged chunks
+
+Build at: 2026-05-01T16:29:22.905Z - Hash: 71d8041969bde527 - Time: 388ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                        | Names                        | Raw Size
+runtime.js                                 | runtime                      | 12.68 kB |
+
+Lazy Chunk Files                           | Names                        | Raw Size
+src_app_employee_chat_chat_component_ts.js | employee-chat-chat-component | 28.37 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:29:23.226Z - Hash: 2d255c2af59f9a81 - Time: 256ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                        | Names                        | Raw Size
+runtime.js                                 | runtime                      | 12.68 kB |
+
+Lazy Chunk Files                           | Names                        | Raw Size
+src_app_employee_chat_chat_component_ts.js | employee-chat-chat-component | 30.27 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:29:34.533Z - Hash: c78d7aa82c40e019 - Time: 313ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                 | Names                                 | Raw Size
+main.js                                             | main                                  | 27.86 kB |
+runtime.js                                          | runtime                               | 12.68 kB |
+
+Lazy Chunk Files                                    | Names                                 | Raw Size
+src_app_admin_statistics_statistics_component_ts.js | admin-statistics-statistics-component | 31.13 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:29:47.386Z - Hash: faf3739a0f527ad2 - Time: 540ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                              | Names                              | Raw Size
+main.js                                          | main                               | 27.90 kB |
+runtime.js                                       | runtime                            | 12.68 kB |
+
+Lazy Chunk Files                                 | Names                              | Raw Size
+src_app_employee_profile_profile_component_ts.js | employee-profile-profile-component | 31.07 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T16:31:14.729Z - Hash: f3ed37f2348d8744 - Time: 456ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                              | Names                              | Raw Size
+runtime.js                                       | runtime                            | 12.68 kB |
+
+Lazy Chunk Files                                 | Names                              | Raw Size
+src_app_employee_profile_profile_component_ts.js | employee-profile-profile-component | 31.72 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:31:19.232Z - Hash: 91435b59108ab5f5 - Time: 253ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 33.65 kB |
+runtime.js          | runtime | 12.68 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T16:55:21.348Z - Hash: 321b949fbb0c221e - Time: 531ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                                                                                     | Names                                              | Raw Size
+main.js                                                                                                 | main                                               | 33.69 kB |
+runtime.js                                                                                              | runtime                                            | 12.68 kB |
+
+Lazy Chunk Files                                                                                        | Names                                              | Raw Size
+default-src_app_shared_components_navbar_navbar_component_ts-src_app_shared_components_sideba-04b237.js | shared-layouts-admin-layout-admin-layout-component | 58.87 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T17:00:01.600Z - Hash: 680391ba9b66fa0a - Time: 547ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 34.29 kB |
+runtime.js          | runtime | 12.68 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:00:01.830Z - Hash: b20f3217bb587c0a - Time: 198ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 32.25 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:01:21.217Z - Hash: 2b1c9a8395cf9a0e - Time: 430ms
+
+Error: src/app/admin/dashboard/dashboard.component.ts:67:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+67         const userList = extractList<any>(users.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:68:57 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+68         const employeeList = extractList<any>(employees.data);
+                                                           ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:69:55 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+69         const projectList = extractList<any>(projects.data);
+                                                         ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:70:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+70         const taskList = extractList<any>(tasks.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:87:36 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+87           .filter(result => result.error)
+                                      ~~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:88:33 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+88           .map(result => result.error!);
+                                   ~~~~~
+
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 33.38 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:01:28.674Z - Hash: ffc4bea61d045609 - Time: 249ms
+
+Error: src/app/admin/dashboard/dashboard.component.ts:67:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+67         const userList = extractList<any>(users.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:68:57 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+68         const employeeList = extractList<any>(employees.data);
+                                                           ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:69:55 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+69         const projectList = extractList<any>(projects.data);
+                                                         ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:70:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+70         const taskList = extractList<any>(tasks.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:87:36 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+87           .filter(result => result.error)
+                                      ~~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:88:33 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+88           .map(result => result.error!);
+                                   ~~~~~
+
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 33.98 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:01:34.344Z - Hash: 5ec576a4cc633d00 - Time: 282ms
+
+Error: src/app/admin/dashboard/dashboard.component.ts:67:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+67         const userList = extractList<any>(users.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:68:57 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+68         const employeeList = extractList<any>(employees.data);
+                                                           ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:69:55 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+69         const projectList = extractList<any>(projects.data);
+                                                         ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:70:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+70         const taskList = extractList<any>(tasks.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:87:36 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+87           .filter(result => result.error)
+                                      ~~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:88:33 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+88           .map(result => result.error!);
+                                   ~~~~~
+
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 33.98 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:01:54.968Z - Hash: 51aa920a72b74883 - Time: 217ms
+
+Error: src/app/admin/dashboard/dashboard.component.ts:72:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+72         const userList = extractList<any>(users.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:73:57 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+73         const employeeList = extractList<any>(employees.data);
+                                                           ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:74:55 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+74         const projectList = extractList<any>(projects.data);
+                                                         ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:75:49 - error TS2339: Property 'data' does not exist on type 'unknown'.
+
+75         const taskList = extractList<any>(tasks.data);
+                                                   ~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:92:36 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+92           .filter(result => result.error)
+                                      ~~~~~
+
+
+Error: src/app/admin/dashboard/dashboard.component.ts:93:33 - error TS2339: Property 'error' does not exist on type 'unknown'.
+
+93           .map(result => result.error!);
+                                   ~~~~~
+
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_dashboard_dashboard_component_ts.js | admin-dashboard-dashboard-component | 33.98 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:02:00.219Z - Hash: 14d2df88dcaadace - Time: 270ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 34.83 kB |
+runtime.js          | runtime | 12.68 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:10:33.724Z - Hash: 8857070689621440 - Time: 378ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 34.78 kB |
+runtime.js          | runtime | 12.68 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T17:10:36.317Z - Hash: 22e86842eedd08b0 - Time: 325ms
+
+./src/app/app.routes.ts:35:25-64 - Error: Module not found: Error: Can't resolve './admin/users/users.component' in 'C:\Users\User\Desktop\2émé genie info\2eme semestre\jsp\project-management-app\frontend\src\app'
+
+Error: src/app/app.routes.ts:48:37 - error TS2307: Cannot find module './admin/users/users.component' or its corresponding type declarations.
+
+48         loadComponent: () => import('./admin/users/users.component').then(m => m.UsersComponent)
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       |  Raw Size
+main.js                                   | main                        |  34.79 kB |
+runtime.js                                | runtime                     |  12.68 kB |
+
+Lazy Chunk Files                          | Names                       |  Raw Size
+src_app_admin_users_users_component_ts.js | admin-users-users-component | 898 bytes |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T17:11:30.022Z - Hash: 25ff8666305c0f13 - Time: 176ms
+
+./src/app/admin/users/users.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\User\Desktop\2émé genie info\2eme semestre\jsp\project-management-app\frontend\src\app\admin\users\users.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.routes.ts:48:37 - error TS2307: Cannot find module './admin/users/users.component' or its corresponding type declarations.
+
+48         loadComponent: () => import('./admin/users/users.component').then(m => m.UsersComponent)
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                       | Names                       | Raw Size
+main.js                                   | main                        | 34.91 kB |
+runtime.js                                | runtime                     | 12.68 kB |
+
+Lazy Chunk Files                          | Names                       | Raw Size
+src_app_admin_users_users_component_ts.js | admin-users-users-component | 58.07 kB |
+common.js                                 | common                      | 14.82 kB |
+
+31 unchanged chunks
+
+Build at: 2026-05-01T17:24:07.191Z - Hash: 7abefd3253066d9c - Time: 1052ms
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/admin/assignments/assignments.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/admin/categories/categories.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/core/interceptors/jwt.interceptor.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/core/services/category.service.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/core/services/employee.service.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/landing/contact/contact.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/landing/features/features.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/landing/technologies/technologies.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/shared/components/calendar-wrapper/calendar-wrapper.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/shared/components/charts/charts.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/shared/components/footer/footer.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/shared/components/loading/loading.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/shared/components/notification/notification.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/app/shared/components/tables/tables.component.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+Warning: C:/Users/User/Desktop/2émé genie info/2eme semestre/jsp/project-management-app/frontend/src/environments/environment.prod.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                            | Names                            | Raw Size
+runtime.js                                     | runtime                          | 12.68 kB |
+
+Lazy Chunk Files                               | Names                            | Raw Size
+src_app_auth_register_register_component_ts.js | auth-register-register-component | 29.14 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:24:11.493Z - Hash: bbe2eecbace739b4 - Time: 331ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                            | Names                            | Raw Size
+runtime.js                                     | runtime                          | 12.68 kB |
+
+Lazy Chunk Files                               | Names                            | Raw Size
+src_app_auth_register_register_component_ts.js | auth-register-register-component | 30.95 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:24:17.192Z - Hash: 3c7861ac9646c229 - Time: 293ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                            | Names                            | Raw Size
+main.js                                        | main                             | 34.96 kB |
+runtime.js                                     | runtime                          | 12.68 kB |
+
+Lazy Chunk Files                               | Names                            | Raw Size
+src_app_auth_register_register_component_ts.js | auth-register-register-component | 30.95 kB |
+
+32 unchanged chunks
+
+Build at: 2026-05-01T17:24:20.972Z - Hash: 4d3d67eb86d92e31 - Time: 484ms
+
+Error: src/app/core/services/auth.service.ts:33:13 - error TS2322: Type '{ id: any; firstname: string; lastname: string; email: string; role: string; status: string; createdAt: Date; employeeType: string; }' is not assignable to type 'User'.
+  Object literal may only specify known properties, and 'employeeType' does not exist in type 'User'.
+
+33             employeeType: request.employeeType
+               ~~~~~~~~~~~~
+
+
+
+
+× Failed to compile.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 34.96 kB |
+runtime.js          | runtime | 12.68 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:24:24.775Z - Hash: dbb13edab3b0b0d2 - Time: 297ms
+
+√ Compiled successfully.
+√ Browser application bundle generation complete.
+
+Initial Chunk Files                               | Names                               | Raw Size
+runtime.js                                        | runtime                             | 12.68 kB |
+
+Lazy Chunk Files                                  | Names                               | Raw Size
+src_app_admin_employees_employees_component_ts.js | admin-employees-employees-component | 27.07 kB |
+
+33 unchanged chunks
+
+Build at: 2026-05-01T17:24:36.015Z - Hash: 00ae429566727ebb - Time: 360ms
+
+√ Compiled successfully.

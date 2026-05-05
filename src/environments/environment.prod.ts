@@ -1,5 +1,5 @@
 export const environment = {
-  apiUrl: 'https://api.project-management.com/api',
+  apiUrl: '/api',
   wsUrl: 'wss://api.project-management.com/api/ws/chat',
   production: true,
   appName: 'Project Management Platform',

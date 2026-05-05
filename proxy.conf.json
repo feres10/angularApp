@@ -1,0 +1,17 @@
+{
+  "/api": {
+    "target": "http://localhost:8093",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/api"
+    }
+  },
+  "/api/ws/chat": {
+    "target": "ws://localhost:8093",
+    "ws": true,
+    "secure": false,
+    "pathRewrite": {
+      "^/api/ws/chat": "/api/ws/chat"
+    }
+  }
+}
