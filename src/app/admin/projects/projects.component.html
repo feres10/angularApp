@@ -1,0 +1,98 @@
+<div class="projects-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Projects Management</h1>
+      <p>Manage all projects in your organization</p>
+    </div>
+    <button class="btn-primary" (click)="onAddProject()">+ New Project</button>
+  </div>
+
+  <div class="filters-bar">
+    <input type="text" placeholder="Search projects..." class="search-input" />
+    <select class="filter-select">
+      <option>All Status</option>
+      <option>Planning</option>
+      <option>In Progress</option>
+      <option>On Hold</option>
+      <option>Completed</option>
+    </select>
+    <select class="filter-select">
+      <option>All Categories</option>
+      <option>Development</option>
+      <option>Design</option>
+      <option>Marketing</option>
+    </select>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="card-header">
+        <h3>{{ project.name }}</h3>
+        <span class="status-badge" [class]="'status-' + project.status.toLowerCase()">{{ project.status }}</span>
+      </div>
+      <p class="project-description">{{ project.description }}</p>
+      <div class="project-info">
+        <div class="info-item">
+          <span class="label">👤 Manager</span>
+          <span class="value">{{ project.manager }}</span>
+        </div>
+        <div class="info-item">
+          <span class="label">👥 Team</span>
+          <span class="value">{{ project.teamSize }} members</span>
+        </div>
+        <div class="info-item">
+          <span class="label">📅 Due Date</span>
+          <span class="value">{{ project.dueDate }}</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="project.progress"></div>
+        </div>
+        <span class="progress-text">{{ project.progress }}% Complete</span>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn edit" title="Edit" (click)="onEditProject(project.id)">✏️</button>
+        <button class="action-btn view" title="View Details" (click)="onViewProject(project.id)">👁️</button>
+        <button class="action-btn delete" title="Delete" (click)="onDeleteProject(project.id)">🗑️</button>
+      </div>
+    </div>
+    <p *ngIf="projects.length === 0">No projects found.</p>
+  </div>
+</div>
+
+<app-modal
+  [isOpen]="isProjectModalOpen"
+  [title]="'New Project'"
+  [confirmText]="'Create Project'"
+  [cancelText]="'Cancel'"
+  [isConfirmDisabled]="!projectForm.name"
+  (confirm)="submitProjectForm()"
+  (close)="closeProjectModal()"
+>
+  <div class="project-form">
+    <div class="form-row">
+      <label for="projectName">Project Name</label>
+      <input id="projectName" type="text" [(ngModel)]="projectForm.name" name="projectName" />
+    </div>
+
+    <div class="form-row">
+      <label for="projectDescription">Description</label>
+      <textarea id="projectDescription" rows="4" [(ngModel)]="projectForm.description" name="projectDescription"></textarea>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="startDate">Start Date</label>
+        <input id="startDate" type="date" [(ngModel)]="projectForm.startDate" name="startDate" />
+      </div>
+
+      <div class="form-row">
+        <label for="endDate">End Date</label>
+        <input id="endDate" type="date" [(ngModel)]="projectForm.endDate" name="endDate" />
+      </div>
+    </div>
+
+    <p class="form-error" *ngIf="formError">{{ formError }}</p>
+  </div>
+</app-modal>

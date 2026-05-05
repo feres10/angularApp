@@ -1,0 +1,69 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Admin Dashboard</h1>
+    <p>Welcome back. Here is the current state of your platform.</p>
+  </div>
+
+  <div class="dashboard-alert" *ngIf="loadWarnings.length > 0">
+    {{ loadWarnings.join(' • ') }}
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">US</div>
+      <div class="stat-content">
+        <h3>Total Users</h3>
+        <p class="stat-number">{{ stats.totalUsers }}</p>
+        <span class="stat-change positive">From database</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">EM</div>
+      <div class="stat-content">
+        <h3>Employees</h3>
+        <p class="stat-number">{{ stats.totalEmployees }}</p>
+        <span class="stat-change">Active</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">PR</div>
+      <div class="stat-content">
+        <h3>Projects</h3>
+        <p class="stat-number">{{ stats.totalProjects }}</p>
+        <span class="stat-change">In progress</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">TS</div>
+      <div class="stat-content">
+        <h3>Tasks</h3>
+        <p class="stat-number">{{ stats.totalTasks }}</p>
+        <span class="stat-change positive">{{ stats.completedTasks }} completed</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+    <div class="chart-section">
+      <div class="chart-card">
+        <h2>Users Overview</h2>
+        <div class="chart-placeholder">
+          {{ isLoading ? 'Loading dashboard data...' : 'Live counts loaded from the API' }}
+        </div>
+      </div>
+    </div>
+    <div class="recent-section">
+      <div class="recent-card">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item" *ngFor="let activity of recentActivities">
+            <span class="activity-icon">{{ activity.icon }}</span>
+            <span class="activity-text">{{ activity.message }}</span>
+            <span class="activity-time">{{ activity.timestamp }}</span>
+          </div>
+          <p *ngIf="recentActivities.length === 0">No recent activity found.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="landing-page">
+  <!-- Navigation -->
+  <nav class="landing-nav">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-icon">📊</span>
+        <span class="logo-text">ProjectFlow</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#technology">Technology</a>
+        <a href="#pricing">Pricing</a>
+        <a routerLink="/auth/login" class="btn btn-primary btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Modern Project Management</h1>
+      <p class="hero-subtitle">A powerful, intuitive platform for team collaboration and project tracking</p>
+      <div class="hero-buttons">
+        <button routerLink="/auth/register" class="btn btn-primary btn-lg">Get Started Free</button>
+        <button class="btn btn-outline btn-lg">Watch Demo</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="gradient-circle"></div>
+      <div class="floating-card card-1"></div>
+      <div class="floating-card card-2"></div>
+      <div class="floating-card card-3"></div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <h2>Powerful Features</h2>
+      <p>Everything you need to manage projects efficiently</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features">
+        <div class="feature-icon">{{ feature.icon }}</div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section class="technology-section" id="technology">
+    <div class="section-header">
+      <h2>Built with Modern Tech</h2>
+      <p>Leveraging the latest technologies for optimal performance</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card" *ngFor="let tech of technologies">
+        <div class="tech-logo">{{ tech.logo }}</div>
+        <h4>{{ tech.name }}</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Project Management?</h2>
+    <p>Start with a free account today. No credit card required.</p>
+    <button routerLink="/auth/register" class="btn btn-secondary btn-lg">Start Free Trial</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>ProjectFlow</h4>
+        <p>Modern project management platform</p>
+      </div>
+      <div class="footer-section">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#technology">Technology</a>
+        <a href="#">Pricing</a>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 ProjectFlow. All rights reserved.</p>
+    </div>
+  </footer>
+</div>

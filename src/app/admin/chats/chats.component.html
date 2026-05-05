@@ -1,0 +1,52 @@
+<div class="chats-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Team Chats</h1>
+      <p>Manage team communications and messages</p>
+    </div>
+    <button class="btn-primary" (click)="onNewChatRoom()">+ New Chat Room</button>
+  </div>
+
+  <div class="chats-wrapper">
+    <div class="chats-sidebar">
+      <div class="search-wrapper">
+        <input type="text" placeholder="Search chats..." class="search-input" />
+      </div>
+      <div class="chats-list">
+        <div class="chat-item" [class.active]="selectedChat?.id === chat.id" *ngFor="let chat of chats" (click)="selectChat(chat)">
+          <div class="chat-header">
+            <h4>{{ chat.name }}</h4>
+            <span class="unread-badge" *ngIf="chat.unreadCount > 0">{{ chat.unreadCount }}</span>
+          </div>
+          <p class="chat-preview">{{ chat.lastMessage }}</p>
+          <span class="chat-time">{{ chat.lastMessageTime }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chats-content">
+      <div class="chat-header">
+        <h2>{{ selectedChat?.name || 'No chat selected' }}</h2>
+        <span class="member-count">{{ selectedChat?.memberCount || 0 }} members</span>
+      </div>
+
+      <div class="messages-container">
+        <div class="message-item" *ngFor="let message of messages">
+          <div class="message-avatar">{{ message.sender.charAt(0) }}</div>
+          <div class="message-content">
+            <div class="message-header">
+              <span class="sender-name">{{ message.sender }}</span>
+              <span class="message-time">{{ message.time }}</span>
+            </div>
+            <p class="message-text">{{ message.text }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-input">
+        <input #messageInput type="text" placeholder="Type a message..." class="input-field" />
+        <button class="btn-primary" (click)="onSendMessage(messageInput.value); messageInput.value = ''">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

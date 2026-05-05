@@ -1,0 +1,39 @@
+<header class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <button (click)="toggleSidebar()" class="sidebar-toggle">
+        <span>Menu</span>
+      </button>
+      <div class="breadcrumb">
+        <span class="page-title">{{ pageTitle }}</span>
+      </div>
+    </div>
+
+    <div class="navbar-right">
+      <div class="navbar-search">
+        <input type="search" placeholder="Search" class="search-input">
+        <span class="search-icon">S</span>
+      </div>
+
+      <div class="navbar-actions">
+        <button class="action-btn" title="Notifications">
+          <span>N</span>
+          <span class="badge" *ngIf="unreadNotifications > 0">{{ unreadNotifications }}</span>
+        </button>
+        <button class="action-btn" (click)="toggleUserMenu()" title="User Menu">
+          <span>U</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="user-menu" *ngIf="showUserMenu">
+      <div class="user-info">
+        <span class="user-name">{{ userName }}</span>
+        <span class="user-role">{{ userRole }}</span>
+      </div>
+      <button type="button" class="menu-item" (click)="navigateToUserRoute(profileRoute)">Profile</button>
+      <button type="button" class="menu-item" (click)="navigateToUserRoute(settingsRoute)">Settings</button>
+      <button (click)="logout()" class="menu-item">Logout</button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,37 @@
+<div class="my-team-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>My Team</h1>
+      <p>View team members and collaborate</p>
+    </div>
+  </div>
+
+  <div class="team-info-card">
+    <div class="team-header">
+      <div>
+        <h2>{{ teamName || 'No team found' }}</h2>
+        <p class="team-description">{{ teamDescription }}</p>
+      </div>
+      <span class="member-count">{{ teamMembers.length }} Members</span>
+    </div>
+    <div class="team-leader">
+      <span class="label">👤 Team Lead:</span>
+      <span class="value">{{ teamLeader || 'No leader' }}</span>
+    </div>
+  </div>
+
+  <div class="members-grid">
+    <div class="member-card" *ngFor="let member of teamMembers">
+      <div class="member-avatar">{{ member.name.charAt(0) }}</div>
+      <div class="member-info">
+        <h4>{{ member.name }}</h4>
+        <p class="member-role">{{ member.role }}</p>
+        <p class="member-email">{{ member.email }}</p>
+      </div>
+      <div class="member-status" [class]="'status-' + member.status.toLowerCase()">
+        {{ member.status }}
+      </div>
+    </div>
+    <p *ngIf="teamMembers.length === 0">No team members found.</p>
+  </div>
+</div>

@@ -1,0 +1,173 @@
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <span class="logo-icon">PF</span>
+      <span class="logo-text">ProjectFlow</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-group" *ngIf="isAdmin">
+      <h3 class="nav-title">Admin</h3>
+      <a routerLink="/admin/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 13h8V3H3v10Zm0 8h8v-6H3v6Zm10 0h8V11h-8v10Zm0-18v6h8V3h-8Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Dashboard</span>
+      </a>
+      <a routerLink="/admin/users" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3ZM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Users</span>
+      </a>
+      <a routerLink="/admin/employees" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Employees</span>
+      </a>
+      <a routerLink="/admin/projects" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 4H2v16h20V6H12l-2-2Zm0 4h10v10H4V6h5.17L10 8Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Projects</span>
+      </a>
+      <a routerLink="/admin/tasks" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 11.5 7.5 10 6.08 11.42 9 14.34l5.92-5.92L13.5 7 9 11.5ZM4 5h16v14H4V5Zm2 2v10h12V7H6Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Tasks</span>
+      </a>
+      <a routerLink="/admin/teams" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 12c2.21 0 4-1.79 4-4S11.21 4 9 4 5 5.79 5 8s1.79 4 4 4Zm6 0c1.66 0 3-1.34 3-3s-1.34-3-3-3c-.35 0-.69.06-1 .17.63.82 1 1.84 1 2.94s-.37 2.12-1 2.94c.31.1.65.15 1 .15ZM9 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Zm6.76.2c1.3.86 2.24 2.02 2.24 3.8v2h5v-2c0-2.31-4.01-3.61-7.24-3.8Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Teams</span>
+      </a>
+      <a routerLink="/admin/calendar" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h2v2h6V2h2v2h3v18H4V4h3V2Zm13 8H6v10h14V10ZM6 8h14V6H6v2Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Calendar</span>
+      </a>
+      <a routerLink="/admin/chats" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16v12H7.17L4 19.17V4Zm2 2v8.34l.34-.34H18V6H6Zm3 3h6v2H9V9Zm0 3h4v2H9v-2Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Chats</span>
+      </a>
+      <a routerLink="/admin/notifications" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2Zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5S10.5 3.17 10.5 4v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Notifications</span>
+      </a>
+      <a routerLink="/admin/profile" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm-7 8c0-2.67 5.33-4 7-4s7 1.33 7 4v1H5v-1Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Profile</span>
+      </a>
+    </div>
+
+    <div class="nav-group" *ngIf="isEmployee">
+      <h3 class="nav-title">Employee</h3>
+      <a routerLink="/employee/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 13h8V3H3v10Zm0 8h8v-6H3v6Zm10 0h8V11h-8v10Zm0-18v6h8V3h-8Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Dashboard</span>
+      </a>
+      <a routerLink="/employee/my-projects" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 4H2v16h20V6H12l-2-2Zm0 4h10v10H4V6h5.17L10 8Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">My Projects</span>
+      </a>
+      <a routerLink="/employee/my-tasks" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 11.5 7.5 10 6.08 11.42 9 14.34l5.92-5.92L13.5 7 9 11.5ZM4 5h16v14H4V5Zm2 2v10h12V7H6Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">My Tasks</span>
+      </a>
+      <a routerLink="/employee/my-calendar" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h2v2h6V2h2v2h3v18H4V4h3V2Zm13 8H6v10h14V10ZM6 8h14V6H6v2Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">My Calendar</span>
+      </a>
+      <a routerLink="/employee/my-team" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 12c2.21 0 4-1.79 4-4S11.21 4 9 4 5 5.79 5 8s1.79 4 4 4Zm6 0c1.66 0 3-1.34 3-3s-1.34-3-3-3c-.35 0-.69.06-1 .17.63.82 1 1.84 1 2.94s-.37 2.12-1 2.94c.31.1.65.15 1 .15ZM9 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Zm6.76.2c1.3.86 2.24 2.02 2.24 3.8v2h5v-2c0-2.31-4.01-3.61-7.24-3.8Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">My Team</span>
+      </a>
+      <a routerLink="/employee/chat" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16v12H7.17L4 19.17V4Zm2 2v8.34l.34-.34H18V6H6Zm3 3h6v2H9V9Zm0 3h4v2H9v-2Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Chat</span>
+      </a>
+      <a routerLink="/employee/profile" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm-7 8c0-2.67 5.33-4 7-4s7 1.33 7 4v1H5v-1Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Profile</span>
+      </a>
+      <a routerLink="/employee/notifications" routerLinkActive="active" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2Zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5S10.5 3.17 10.5 4v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2Z"></path>
+          </svg>
+        </span>
+        <span class="nav-label">Notifications</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <button (click)="logout()" class="logout-btn">
+      <span class="logout-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M10 17v-2h4V9h-4V7l-5 5 5 5Zm-6 4h8v-2H6V5h6V3H4v18Zm12-4 4-5-4-5v3h-6v4h6v3Z"></path>
+        </svg>
+      </span>
+      Logout
+    </button>
+  </div>
+</aside>

@@ -1,0 +1,110 @@
+<div class="employees-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Employees Management</h1>
+      <p>Manage all employees in your organization</p>
+    </div>
+    <button class="btn-primary" (click)="onAddEmployee()">+ Add Employee</button>
+  </div>
+
+  <div class="filters-bar">
+    <input type="text" placeholder="Search by name or email..." class="search-input" />
+    <select class="filter-select">
+      <option>All Departments</option>
+      <option>Engineering</option>
+      <option>Development</option>
+      <option>Marketing</option>
+      <option>HR</option>
+    </select>
+    <select class="filter-select">
+      <option>All Status</option>
+      <option>Active</option>
+      <option>On Leave</option>
+      <option>Inactive</option>
+    </select>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="employees-table">
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Position</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.department }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.phone }}</td>
+          <td>
+            <button class="action-btn edit" title="Edit" (click)="onEditEmployee(employee.id)">Edit</button>
+            <button class="action-btn delete" title="Delete" (click)="onDeleteEmployee(employee.id)">Delete</button>
+          </td>
+        </tr>
+        <tr *ngIf="employees.length === 0">
+          <td colspan="6">No employees found.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <button class="btn-secondary">Previous</button>
+    <span class="page-info">Page 1 of 10</span>
+    <button class="btn-secondary">Next</button>
+  </div>
+</div>
+
+<app-modal
+  [isOpen]="isEmployeeModalOpen"
+  [title]="isEditMode ? 'Edit Employee' : 'Add Employee'"
+  [confirmText]="isEditMode ? 'Save Changes' : 'Create Employee'"
+  [cancelText]="'Cancel'"
+  [isConfirmDisabled]="!employeeForm.firstName || !employeeForm.lastName || !employeeForm.email || (!isEditMode && !employeeForm.password)"
+  (confirm)="submitEmployeeForm()"
+  (close)="closeEmployeeModal()"
+>
+  <div class="employee-form">
+    <div class="form-row">
+      <label for="firstName">First Name</label>
+      <input id="firstName" type="text" [(ngModel)]="employeeForm.firstName" name="firstName" />
+    </div>
+
+    <div class="form-row">
+      <label for="lastName">Last Name</label>
+      <input id="lastName" type="text" [(ngModel)]="employeeForm.lastName" name="lastName" />
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" type="email" [(ngModel)]="employeeForm.email" name="email" />
+    </div>
+
+    <div class="form-row" *ngIf="!isEditMode">
+      <label for="password">Password</label>
+      <input id="password" type="password" [(ngModel)]="employeeForm.password" name="password" />
+    </div>
+
+    <div class="form-row">
+      <label for="department">Department</label>
+      <input id="department" type="text" [(ngModel)]="employeeForm.department" name="department" placeholder="Enter department" />
+    </div>
+
+    <div class="form-row">
+      <label for="employeeType">Employee Type</label>
+      <select id="employeeType" [(ngModel)]="employeeForm.employeeType" name="employeeType">
+        <option value="ENGINEER">ENGINEER</option>
+        <option value="TECHNICIAN">TECHNICIAN</option>
+      </select>
+    </div>
+
+    <p class="form-error" *ngIf="formError">{{ formError }}</p>
+  </div>
+</app-modal>

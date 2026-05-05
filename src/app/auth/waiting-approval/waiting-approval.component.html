@@ -1,0 +1,42 @@
+<div class="waiting-container">
+  <div class="waiting-box">
+    <div class="waiting-icon">⏳</div>
+    <h1>Waiting for Approval</h1>
+    <p>Your account has been created successfully!</p>
+    
+    <div class="waiting-content">
+      <p>Your account is currently pending approval by an administrator.</p>
+      <p>You will receive an email notification once your account has been activated.</p>
+      
+      <div class="pending-info">
+        <div class="info-item">
+          <span class="info-icon">📧</span>
+          <span>{{ userEmail }}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">👤</span>
+          <span>{{ userName }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="waiting-tips">
+      <h3>What's Next?</h3>
+      <ul>
+        <li>Check your email for updates</li>
+        <li>An admin will review your account soon</li>
+        <li>Once approved, you'll receive a confirmation email</li>
+        <li>Then you can log in and start using the platform</li>
+      </ul>
+    </div>
+
+    <div class="waiting-actions">
+      <button (click)="logout()" class="btn btn-outline">Return to Login</button>
+    </div>
+  </div>
+
+  <div class="waiting-background">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+  </div>
+</div>

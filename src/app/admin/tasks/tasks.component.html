@@ -1,0 +1,226 @@
+<div class="tasks-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Tasks Management</h1>
+      <p>Manage and track all tasks</p>
+    </div>
+    <button class="btn-primary" (click)="onCreateTask()">+ Create Task</button>
+  </div>
+
+  <div class="filters-bar">
+    <input
+      type="text"
+      placeholder="Search tasks..."
+      class="search-input"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="onFiltersChange()"
+    />
+    <select class="filter-select" [(ngModel)]="selectedStatus" (ngModelChange)="onFiltersChange()">
+      <option value="ALL">All Status</option>
+      <option value="TODO">Todo</option>
+      <option value="IN_PROGRESS">In Progress</option>
+      <option value="COMPLETED">Completed</option>
+      <option value="CANCELLED">Cancelled</option>
+    </select>
+    <select class="filter-select" [(ngModel)]="selectedPriority" (ngModelChange)="onFiltersChange()">
+      <option value="ALL">All Priority</option>
+      <option value="HIGH">High</option>
+      <option value="MEDIUM">Medium</option>
+      <option value="LOW">Low</option>
+      <option value="URGENT">Urgent</option>
+    </select>
+  </div>
+
+  <div class="tasks-grid">
+    <div class="task-card" *ngFor="let task of filteredTasks">
+      <div class="card-header">
+        <h3>{{ task.title }}</h3>
+        <span class="priority-badge" [class]="'priority-' + task.priority.toLowerCase()">{{ task.priority }}</span>
+      </div>
+      <p class="task-description">{{ task.description }}</p>
+      <div class="task-meta">
+        <div class="meta-item">
+          <span>Assignee</span>
+          <span>{{ task.assignee }}</span>
+        </div>
+        <div class="meta-item">
+          <span>Dates</span>
+          <span>{{ task.startDate || '-' }} -> {{ task.dueDate || '-' }}</span>
+        </div>
+        <div class="meta-item">
+          <span class="status-dot" [class]="'status-' + task.status.toLowerCase()"></span>
+          <span>{{ task.status }}</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="task.progress"></div>
+        </div>
+        <span class="progress-text">{{ task.progress }}%</span>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn edit" title="Edit" (click)="onEditTask(task.id)">Edit</button>
+        <button class="action-btn delete" title="Delete" (click)="onDeleteTask(task.id)">Delete</button>
+      </div>
+    </div>
+    <p *ngIf="filteredTasks.length === 0">No tasks found.</p>
+  </div>
+</div>
+
+<app-modal
+  [isOpen]="isCreateModalOpen"
+  [title]="'Create Task'"
+  [confirmText]="'Create Task'"
+  [cancelText]="'Cancel'"
+  [isConfirmDisabled]="!taskForm.title || !taskForm.projectId"
+  (confirm)="submitCreateTask()"
+  (close)="closeCreateModal()"
+>
+  <div class="task-form">
+    <div class="form-row">
+      <label for="taskTitle">Task Title</label>
+      <input id="taskTitle" type="text" [(ngModel)]="taskForm.title" name="taskTitle" />
+    </div>
+
+    <div class="form-row">
+      <label for="taskDescription">Description</label>
+      <textarea id="taskDescription" rows="4" [(ngModel)]="taskForm.description" name="taskDescription"></textarea>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="taskPriority">Priority</label>
+        <select id="taskPriority" [(ngModel)]="taskForm.priority" name="taskPriority">
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
+          <option value="URGENT">Urgent</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="taskStartDate">Start Date</label>
+        <input id="taskStartDate" type="date" [(ngModel)]="taskForm.startDate" name="taskStartDate" />
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="taskDueDate">End Date</label>
+        <input id="taskDueDate" type="date" [(ngModel)]="taskForm.dueDate" name="taskDueDate" />
+      </div>
+
+      <div class="form-row">
+        <label for="taskProjectId">Project</label>
+        <select id="taskProjectId" [(ngModel)]="taskForm.projectId" name="taskProjectId">
+          <option value="">Select a project</option>
+          <option *ngFor="let project of projectOptions" [value]="project.id">{{ project.label }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="taskEmployeeId">Assigned Employee</label>
+        <select id="taskEmployeeId" [(ngModel)]="taskForm.assignedEmployeeId" name="taskEmployeeId">
+          <option value="">Select an employee</option>
+          <option *ngFor="let employee of employeeOptions" [value]="employee.id">{{ employee.label }}</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="taskTeamId">Team</label>
+        <select id="taskTeamId" [(ngModel)]="taskForm.teamId" name="taskTeamId">
+          <option value="">Select a team</option>
+          <option *ngFor="let team of teamOptions" [value]="team.id">{{ team.label }}</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="form-error" *ngIf="createError">{{ createError }}</p>
+  </div>
+</app-modal>
+
+<app-modal
+  [isOpen]="isEditModalOpen"
+  [title]="'Edit Task'"
+  [confirmText]="'Save Changes'"
+  [cancelText]="'Cancel'"
+  [isConfirmDisabled]="!editTaskForm.title || !editTaskForm.projectId"
+  (confirm)="submitEditTask()"
+  (close)="closeEditModal()"
+>
+  <div class="task-form">
+    <div class="form-row">
+      <label for="editTaskTitle">Task Title</label>
+      <input id="editTaskTitle" type="text" [(ngModel)]="editTaskForm.title" name="editTaskTitle" />
+    </div>
+
+    <div class="form-row">
+      <label for="editTaskDescription">Description</label>
+      <textarea id="editTaskDescription" rows="4" [(ngModel)]="editTaskForm.description" name="editTaskDescription"></textarea>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="editTaskPriority">Priority</label>
+        <select id="editTaskPriority" [(ngModel)]="editTaskForm.priority" name="editTaskPriority">
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
+          <option value="URGENT">Urgent</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="editTaskStatus">Status</label>
+        <select id="editTaskStatus" [(ngModel)]="editTaskForm.status" name="editTaskStatus">
+          <option value="TODO">Todo</option>
+          <option value="IN_PROGRESS">In Progress</option>
+          <option value="COMPLETED">Completed</option>
+          <option value="CANCELLED">Cancelled</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="editTaskStartDate">Start Date</label>
+        <input id="editTaskStartDate" type="date" [(ngModel)]="editTaskForm.startDate" name="editTaskStartDate" />
+      </div>
+
+      <div class="form-row">
+        <label for="editTaskDueDate">End Date</label>
+        <input id="editTaskDueDate" type="date" [(ngModel)]="editTaskForm.dueDate" name="editTaskDueDate" />
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-row">
+        <label for="editTaskProjectId">Project</label>
+        <select id="editTaskProjectId" [(ngModel)]="editTaskForm.projectId" name="editTaskProjectId">
+          <option value="">Select a project</option>
+          <option *ngFor="let project of projectOptions" [value]="project.id">{{ project.label }}</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="editTaskEmployeeId">Assigned Employee</label>
+        <select id="editTaskEmployeeId" [(ngModel)]="editTaskForm.assignedEmployeeId" name="editTaskEmployeeId">
+          <option value="">Select an employee</option>
+          <option *ngFor="let employee of employeeOptions" [value]="employee.id">{{ employee.label }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="editTaskTeamId">Team</label>
+      <select id="editTaskTeamId" [(ngModel)]="editTaskForm.teamId" name="editTaskTeamId">
+        <option value="">Select a team</option>
+        <option *ngFor="let team of teamOptions" [value]="team.id">{{ team.label }}</option>
+      </select>
+    </div>
+
+    <p class="form-error" *ngIf="editError">{{ editError }}</p>
+  </div>
+</app-modal>

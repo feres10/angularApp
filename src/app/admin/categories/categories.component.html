@@ -1,0 +1,27 @@
+<div class="categories-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Project Categories</h1>
+      <p>Manage project categories and types</p>
+    </div>
+    <button class="btn-primary" (click)="onAddCategory()">+ Add Category</button>
+  </div>
+
+  <div class="filters-bar">
+    <input type="text" placeholder="Search categories..." class="search-input" />
+  </div>
+
+  <div class="categories-grid">
+    <div class="category-card" *ngFor="let category of categories">
+      <div class="category-icon">{{ category.icon }}</div>
+      <h3>{{ category.name }}</h3>
+      <p class="category-description">{{ category.description }}</p>
+      <p class="category-count">{{ category.projectCount }} projects</p>
+      <div class="card-actions">
+        <button class="action-btn edit" title="Edit" (click)="onEditCategory(category.id)">✏️</button>
+        <button class="action-btn delete" title="Delete" (click)="onDeleteCategory(category.id)">🗑️</button>
+      </div>
+    </div>
+    <p *ngIf="categories.length === 0">No categories found.</p>
+  </div>
+</div>

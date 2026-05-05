@@ -1,0 +1,8 @@
+<div class="notification-toast" [class]="'notification-' + type" *ngIf="isVisible">
+  <div class="notification-icon">{{ getIcon(type) }}</div>
+  <div class="notification-message">
+    <p class="notification-title">{{ title }}</p>
+    <p class="notification-text">{{ message }}</p>
+  </div>
+  <button class="notification-close" (click)="close()">✕</button>
+</div>

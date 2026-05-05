@@ -1,0 +1,120 @@
+<div class="auth-container">
+  <div class="auth-box">
+    <div class="auth-header">
+      <h1>Create Account</h1>
+      <p>Join our platform today</p>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="auth-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            formControlName="firstName"
+            placeholder="John"
+            class="form-control">
+          <span class="error-message" *ngIf="isFieldInvalid('firstName')">
+            First name is required
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            formControlName="lastName"
+            placeholder="Doe"
+            class="form-control">
+          <span class="error-message" *ngIf="isFieldInvalid('lastName')">
+            Last name is required
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="your@email.com"
+          class="form-control">
+        <span class="error-message" *ngIf="isFieldInvalid('email')">
+          Please enter a valid email
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="employeeType">Employee Type</label>
+        <select
+          id="employeeType"
+          formControlName="employeeType"
+          class="form-control">
+          <option value="ENGINEER">Engineer</option>
+          <option value="TECHNICIAN">Technician</option>
+        </select>
+        <span class="error-message" *ngIf="isFieldInvalid('employeeType')">
+          Please select an employee type
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="At least 8 characters"
+          class="form-control">
+        <span class="error-message" *ngIf="isFieldInvalid('password')">
+          Password must be at least 8 characters
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          formControlName="confirmPassword"
+          placeholder="Confirm your password"
+          class="form-control">
+        <span class="error-message" *ngIf="isFieldInvalid('confirmPassword')">
+          Passwords do not match
+        </span>
+      </div>
+
+      <div class="form-agree">
+        <label>
+          <input type="checkbox" required>
+          I agree to the Terms of Service and Privacy Policy
+        </label>
+      </div>
+
+      <button 
+        type="submit" 
+        class="btn btn-primary btn-lg"
+        [disabled]="!registerForm.valid || isLoading">
+        <span *ngIf="!isLoading">Create Account</span>
+        <span *ngIf="isLoading">Creating...</span>
+      </button>
+
+      <div class="error-message" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+    </form>
+
+    <div class="auth-footer">
+      <p>Already have an account? 
+        <a routerLink="/auth/login">Sign in here</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="auth-background">
+    <div class="gradient-blob"></div>
+    <div class="gradient-blob blob-2"></div>
+  </div>
+</div>

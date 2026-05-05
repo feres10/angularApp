@@ -1,0 +1,48 @@
+<div class="my-calendar-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>My Calendar</h1>
+      <p>Your personal schedule and deadlines</p>
+    </div>
+  </div>
+
+  <div class="calendar-wrapper">
+    <div class="calendar-controls">
+      <button class="btn-secondary">← Previous</button>
+      <h2>{{ currentMonth }} {{ currentYear }}</h2>
+      <button class="btn-secondary">Next →</button>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="day-header">SUN</div>
+      <div class="day-header">MON</div>
+      <div class="day-header">TUE</div>
+      <div class="day-header">WED</div>
+      <div class="day-header">THU</div>
+      <div class="day-header">FRI</div>
+      <div class="day-header">SAT</div>
+
+      <div class="day-cell empty" *ngFor="let empty of [1,2,3,4]"></div>
+      <div class="day-cell" *ngFor="let day of calendarDays">
+        <div class="day-number">{{ day }}</div>
+        <div class="day-events">
+          <div class="event-dot" *ngIf="hasEvent(day)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-events-section">
+    <h3>My Events</h3>
+    <div class="events-list">
+      <div class="event-item" *ngFor="let event of myEvents">
+        <div class="event-time">{{ event.time }}</div>
+        <div class="event-info">
+          <h4>{{ event.title }}</h4>
+          <p>{{ event.date }}</p>
+        </div>
+      </div>
+      <p *ngIf="myEvents.length === 0">No events found.</p>
+    </div>
+  </div>
+</div>

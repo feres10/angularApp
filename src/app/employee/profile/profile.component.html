@@ -1,0 +1,177 @@
+<div class="profile-container">
+  <app-modal
+    [isOpen]="isEditModalOpen"
+    [title]="'Edit Profile'"
+    [confirmText]="isSavingProfile ? 'Saving...' : 'Save'"
+    [cancelText]="'Cancel'"
+    [isConfirmDisabled]="isProfileFormInvalid()"
+    (confirm)="saveProfile()"
+    (close)="closeEditModal()"
+  >
+    <div class="edit-form">
+      <p class="edit-form-text">Update your profile information below.</p>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="editFirstName">First Name</label>
+          <input
+            id="editFirstName"
+            type="text"
+            [(ngModel)]="editForm.firstName"
+            name="editFirstName"
+            placeholder="Enter first name"
+            autocomplete="given-name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editLastName">Last Name</label>
+          <input
+            id="editLastName"
+            type="text"
+            [(ngModel)]="editForm.lastName"
+            name="editLastName"
+            placeholder="Enter last name"
+            autocomplete="family-name"
+          />
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="editEmail">Email</label>
+          <input
+            id="editEmail"
+            type="email"
+            [(ngModel)]="editForm.email"
+            name="editEmail"
+            placeholder="Enter email address"
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editPhone">Phone</label>
+          <input
+            id="editPhone"
+            type="text"
+            [(ngModel)]="editForm.phone"
+            name="editPhone"
+            placeholder="Enter phone number"
+            autocomplete="tel"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="editDepartment">Department</label>
+          <input
+            id="editDepartment"
+            type="text"
+            [(ngModel)]="editForm.department"
+            name="editDepartment"
+            placeholder="Enter department"
+          />
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="editPosition">Position</label>
+          <input
+            id="editPosition"
+            type="text"
+            [(ngModel)]="editForm.position"
+            name="editPosition"
+            placeholder="Enter position"
+          />
+        </div>
+      </div>
+    </div>
+  </app-modal>
+
+  <div class="section-header">
+    <div class="header-content">
+      <h1>{{ pageTitle }}</h1>
+      <p>{{ pageSubtitle }}</p>
+    </div>
+    <button type="button" class="btn-primary" (click)="onEditProfile()">Edit Profile</button>
+  </div>
+
+  <div class="profile-wrapper">
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar">{{ currentUser.initials }}</div>
+        <div class="profile-info">
+          <h2>{{ currentUser.fullName }}</h2>
+          <p class="role">{{ currentUser.role }}</p>
+          <p class="email">{{ currentUser.email || '-' }}</p>
+        </div>
+      </div>
+
+      <div class="profile-stats">
+        <div class="stat">
+          <span class="stat-value">{{ currentUser.tasksCompleted }}</span>
+          <span class="stat-label">Tasks Completed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{{ currentUser.projectsAssigned }}</span>
+          <span class="stat-label">Projects Assigned</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{{ currentUser.teamMember || '-' }}</span>
+          <span class="stat-label">Team Member</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">{{ joinDateLabel }}</span>
+          <span class="stat-label">Member Since</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-details">
+      <div class="section">
+        <h3>Personal Information</h3>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">First Name</span>
+            <span class="value">{{ currentUser.firstName }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Last Name</span>
+            <span class="value">{{ currentUser.lastName }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Email</span>
+            <span class="value">{{ currentUser.email }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Phone</span>
+            <span class="value">{{ currentUser.phone }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Department</span>
+            <span class="value">{{ currentUser.department }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Position</span>
+            <span class="value">{{ currentUser.position }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Account Settings</h3>
+        <div class="settings-list">
+          <div class="setting-item">
+            <span class="label">Two-Factor Authentication</span>
+            <button class="btn-secondary" (click)="onToggleSetting('twoFAEnabled')">{{ currentUser.twoFAEnabled ? 'Disable' : 'Enable' }}</button>
+          </div>
+          <div class="setting-item">
+            <span class="label">Email Notifications</span>
+            <button type="button" class="btn-secondary" (click)="onToggleSetting('emailNotifications')">{{ currentUser.emailNotifications ? 'Disable' : 'Enable' }}</button>
+          </div>
+          <div class="setting-item">
+            <span class="label">Change Password</span>
+            <button type="button" class="btn-secondary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

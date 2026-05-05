@@ -1,0 +1,40 @@
+<div class="notifications-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Notifications</h1>
+      <p>Manage system notifications and alerts</p>
+    </div>
+    <button class="btn-primary" (click)="onSendNotification()">+ Send Notification</button>
+  </div>
+
+  <div class="filter-bar">
+    <select class="filter-select">
+      <option>All Notifications</option>
+      <option>Unread</option>
+      <option>Read</option>
+    </select>
+    <select class="filter-select">
+      <option>All Types</option>
+      <option>Info</option>
+      <option>Warning</option>
+      <option>Error</option>
+    </select>
+  </div>
+
+  <div class="notifications-list">
+    <div class="notification-item" *ngFor="let notification of notifications">
+      <div class="notification-icon" [class]="'type-' + notification.type.toLowerCase()">
+        <span>{{ getIcon(notification.type) }}</span>
+      </div>
+      <div class="notification-content">
+        <h4>{{ notification.title }}</h4>
+        <p>{{ notification.message }}</p>
+        <span class="notification-time">{{ notification.timestamp }}</span>
+      </div>
+      <div class="notification-actions">
+        <button class="action-btn delete" title="Delete" (click)="onDeleteNotification(notification.id)">🗑️</button>
+      </div>
+    </div>
+    <p *ngIf="notifications.length === 0">No notifications found.</p>
+  </div>
+</div>

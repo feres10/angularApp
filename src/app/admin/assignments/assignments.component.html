@@ -1,0 +1,58 @@
+<div class="assignments-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Task Assignments</h1>
+      <p>Manage and track task assignments</p>
+    </div>
+    <button class="btn-primary" (click)="onAssignTask()">+ Assign Task</button>
+  </div>
+
+  <div class="filters-bar">
+    <input type="text" placeholder="Search assignments..." class="search-input" />
+    <select class="filter-select">
+      <option>All Status</option>
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+      <option>Overdue</option>
+    </select>
+  </div>
+
+  <div class="assignments-table-wrapper">
+    <table class="assignments-table">
+      <thead>
+        <tr>
+          <th>📋 Task</th>
+          <th>👤 Assigned To</th>
+          <th>📅 Due Date</th>
+          <th>⏱️ Priority</th>
+          <th>✅ Status</th>
+          <th>📊 Progress</th>
+          <th>⚙️ Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let assignment of assignments">
+          <td>{{ assignment.taskName }}</td>
+          <td>{{ assignment.assignedTo }}</td>
+          <td>{{ assignment.dueDate }}</td>
+          <td><span class="priority-badge" [class]="'priority-' + assignment.priority.toLowerCase()">{{ assignment.priority }}</span></td>
+          <td><span class="status-badge" [class]="'status-' + assignment.status.toLowerCase()">{{ assignment.status }}</span></td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress-fill" [style.width.%]="assignment.progress"></div>
+            </div>
+            <span class="progress-text">{{ assignment.progress }}%</span>
+          </td>
+          <td>
+            <button class="action-btn edit" title="Edit" (click)="onEditAssignment(assignment.id)">✏️</button>
+            <button class="action-btn delete" title="Delete" (click)="onDeleteAssignment(assignment.id)">🗑️</button>
+          </td>
+        </tr>
+        <tr *ngIf="assignments.length === 0">
+          <td colspan="7">No assignments found.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

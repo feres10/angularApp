@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/app/admin/assignments/assignments.component.ts",
+    "src/app/admin/categories/categories.component.ts",
+    "src/app/admin/statistics/statistics.component.ts",
+    "src/app/core/interceptors/jwt.interceptor.ts",
+    "src/app/core/services/category.service.ts",
+    "src/app/core/services/employee.service.ts",
+    "src/app/landing/contact/contact.component.ts",
+    "src/app/landing/features/features.component.ts",
+    "src/app/landing/technologies/technologies.component.ts",
+    "src/app/shared/components/calendar-wrapper/calendar-wrapper.component.ts",
+    "src/app/shared/components/charts/charts.component.ts",
+    "src/app/shared/components/footer/footer.component.ts",
+    "src/app/shared/components/loading/loading.component.ts",
+    "src/app/shared/components/notification/notification.component.ts",
+    "src/app/shared/components/tables/tables.component.ts",
+    "src/environments/environment.prod.ts"
+  ]
+}

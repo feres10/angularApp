@@ -1,0 +1,48 @@
+<div class="table-wrapper">
+  <div class="table-header">
+    <div class="search-box">
+      <input type="text" placeholder="Search table..." class="search-input" />
+    </div>
+    <div class="table-actions">
+      <select class="entries-select">
+        <option>10 entries</option>
+        <option>25 entries</option>
+        <option>50 entries</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th *ngFor="let col of columns">
+            <span>{{ col.label }}</span>
+            <span class="sort-icon">⇅</span>
+          </th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of tableData">
+          <td *ngFor="let col of columns">{{ row[col.field] }}</td>
+          <td class="actions-cell">
+            <button class="action-btn edit" title="Edit">✏️</button>
+            <button class="action-btn delete" title="Delete">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-footer">
+    <p class="entry-info">Showing 1 to 10 of 45 entries</p>
+    <div class="pagination">
+      <button class="btn-pagination" disabled>Previous</button>
+      <button class="btn-pagination active">1</button>
+      <button class="btn-pagination">2</button>
+      <button class="btn-pagination">3</button>
+      <button class="btn-pagination">Next</button>
+    </div>
+  </div>
+</div>

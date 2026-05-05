@@ -1,0 +1,51 @@
+<div class="calendar-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>Team Calendar</h1>
+      <p>View and manage team events and deadlines</p>
+    </div>
+    <button class="btn-primary" (click)="onNewEvent()">+ New Event</button>
+  </div>
+
+  <div class="calendar-wrapper">
+    <div class="calendar-controls">
+      <button class="btn-secondary">← Previous</button>
+      <h2>{{ currentMonth }} {{ currentYear }}</h2>
+      <button class="btn-secondary">Next →</button>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="day-header">SUN</div>
+      <div class="day-header">MON</div>
+      <div class="day-header">TUE</div>
+      <div class="day-header">WED</div>
+      <div class="day-header">THU</div>
+      <div class="day-header">FRI</div>
+      <div class="day-header">SAT</div>
+
+      <div class="day-cell empty" *ngFor="let empty of [1,2,3,4]"></div>
+      
+      <div class="day-cell" *ngFor="let day of calendarDays">
+        <div class="day-number">{{ day }}</div>
+        <div class="day-events">
+          <div class="event-dot" *ngIf="hasEvent(day)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="events-section">
+    <h3>Upcoming Events</h3>
+    <div class="events-list">
+      <div class="event-item" *ngFor="let event of upcomingEvents">
+        <div class="event-indicator" [class]="'type-' + event.type.toLowerCase()"></div>
+        <div class="event-content">
+          <h4>{{ event.title }}</h4>
+          <p>{{ event.date }} at {{ event.time }}</p>
+        </div>
+        <button class="action-btn delete" title="Delete" (click)="onDeleteEvent(event.id)">🗑️</button>
+      </div>
+      <p *ngIf="upcomingEvents.length === 0">No events found.</p>
+    </div>
+  </div>
+</div>

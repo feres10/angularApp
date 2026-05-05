@@ -1,0 +1,37 @@
+<div class="notifications-container">
+  <div class="section-header">
+    <div class="header-content">
+      <h1>My Notifications</h1>
+      <p>Stay updated with your notifications</p>
+    </div>
+    <button class="btn-secondary" (click)="onMarkAsRead()">Mark all as read</button>
+  </div>
+
+  <div class="filter-bar">
+    <select class="filter-select">
+      <option>All Notifications</option>
+      <option>Unread</option>
+      <option>Read</option>
+    </select>
+    <select class="filter-select">
+      <option>All Types</option>
+      <option>Task Assigned</option>
+      <option>Deadline</option>
+      <option>Comment</option>
+      <option>Mention</option>
+    </select>
+  </div>
+
+  <div class="notifications-list">
+    <div class="notification-item" [class.unread]="!notif.isRead" *ngFor="let notif of myNotifications">
+      <div class="notification-icon">{{ getIcon(notif.type) }}</div>
+      <div class="notification-content">
+        <h4>{{ notif.title }}</h4>
+        <p>{{ notif.message }}</p>
+        <span class="notification-time">{{ notif.timestamp }}</span>
+      </div>
+      <button class="action-btn delete" title="Delete" (click)="onDeleteNotification(notif.id)">✕</button>
+    </div>
+    <p *ngIf="myNotifications.length === 0">No notifications found.</p>
+  </div>
+</div>

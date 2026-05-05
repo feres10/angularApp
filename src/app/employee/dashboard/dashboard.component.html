@@ -1,0 +1,71 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>My Dashboard</h1>
+    <p>Welcome! Here's your overview for today.</p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">✓</div>
+      <div class="stat-content">
+        <h3>My Tasks</h3>
+        <p class="stat-number">{{ stats.myTasks }}</p>
+        <span class="stat-change">{{ stats.inProgress }} in progress</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📁</div>
+      <div class="stat-content">
+        <h3>My Projects</h3>
+        <p class="stat-number">{{ stats.myProjects }}</p>
+        <span class="stat-change">Assigned</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-content">
+        <h3>My Teams</h3>
+        <p class="stat-number">{{ stats.myTeams }}</p>
+        <span class="stat-change">Member</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🔔</div>
+      <div class="stat-content">
+        <h3>Notifications</h3>
+        <p class="stat-number">{{ stats.unreadNotifications }}</p>
+        <span class="stat-change">Unread</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+    <div class="my-tasks-section">
+      <div class="section-card">
+        <h2>My Tasks Today</h2>
+        <div class="tasks-list">
+          <div class="task-item" *ngFor="let task of myTasks">
+            <input type="checkbox" [checked]="task.completed" class="task-checkbox">
+            <span class="task-title">{{ task.title }}</span>
+            <span class="task-priority" [class]="'priority-' + task.priority.toLowerCase()">{{ task.priority }}</span>
+            <span class="task-date">{{ task.dueDate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="section-card">
+        <h2>Upcoming Deadlines</h2>
+        <div class="deadlines-list">
+          <div class="deadline-item" *ngFor="let deadline of upcomingDeadlines">
+            <span class="deadline-icon">📅</span>
+            <div class="deadline-info">
+              <p class="deadline-title">{{ deadline.title }}</p>
+              <p class="deadline-date">{{ deadline.dueDate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
