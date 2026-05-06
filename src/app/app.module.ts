@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
+import { NgrokInterceptor } from './core/interceptors/ngrok.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { ErrorInterceptor } from './core/interceptors/error.interceptor';
     RouterModule.forRoot(routes)
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: NgrokInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
